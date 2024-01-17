@@ -1,0 +1,9 @@
+.container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #2eadff;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
