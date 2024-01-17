@@ -1,0 +1,1 @@
+import{importShared as t}from"./hardik-__federation_fn_import.js";import{j as r}from"./hardik-__federation_expose_App.js";const e="_container_r0mt4_1",s={container:e};await t("react");const o=()=>r.jsx("div",{className:s.container,children:"FirstMessage"});export{o as default};
