@@ -1,0 +1,1 @@
+import{importShared as e}from"./__federation_fn_import-TG6nKPeI.js";import a,{j as o}from"./__federation_expose_App-_pAc7EB3.js";import{r as m}from"./__federation_shared_react-dom-r5rNGkA0.js";var t={},r=m;t.createRoot=r.createRoot,t.hydrateRoot=r.hydrateRoot;const c=await e("react");t.createRoot(document.getElementById("root")).render(o.jsx(c.StrictMode,{children:o.jsx(a,{})}));
