@@ -1,10 +1,9 @@
 import dayjs from "dayjs";
 
-function isTodayInRange(fromDate, toDate) {
+function isTodayInRange(fromDate, toDate, today) {
   const format = "DD MMM h:mm a";
 
   const currentYear = dayjs().year(); // Get the current year
-  const today = dayjs();
 
   const parseDate = (dateString) => {
     const parsedDate = dayjs(`${currentYear} ${dateString}`, {
@@ -13,14 +12,15 @@ function isTodayInRange(fromDate, toDate) {
     return parsedDate.isValid() ? parsedDate : null;
   };
 
+  const defaultToday = today ? parseDate(today) : dayjs();
   const fromDateObj = parseDate(fromDate);
   const toDateObj = parseDate(toDate);
 
   return (
     fromDateObj &&
     toDateObj &&
-    (today.isAfter(fromDateObj) || today.isSame(fromDateObj)) &&
-    (today.isBefore(toDateObj) || today.isSame(toDateObj))
+    (defaultToday.isAfter(fromDateObj) || defaultToday.isSame(fromDateObj)) &&
+    (defaultToday.isBefore(toDateObj) || defaultToday.isSame(toDateObj))
   );
 }
 

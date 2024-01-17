@@ -4,6 +4,7 @@ import federation from "@originjs/vite-plugin-federation";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/mf-festival",
   plugins: [
     react(),
     federation({
@@ -16,8 +17,15 @@ export default defineConfig({
     }),
   ],
   build: {
-    modulePreload: false,
+    modulePreload: true,
     target: "esnext",
     cssCodeSplit: false,
+    rollupOptions: {
+      output: {
+        entryFileNames: `assets/hardik-[name].js`,
+        chunkFileNames: `assets/hardik-[name].js`,
+        assetFileNames: `assets/hardik-[name].[ext]`,
+      },
+    },
   },
 });
