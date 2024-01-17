@@ -1,4 +1,4 @@
-import{r as ot,c as tt,g as et}from"./__federation_shared_react-OCq13AAP.js";import{importShared as ut}from"./__federation_fn_import-TG6nKPeI.js";var rt={exports:{}},G={};/**
+import{r as ot,c as tt,g as et}from"./hardik-__federation_shared_react.js";import{importShared as ut}from"./hardik-__federation_fn_import.js";var rt={exports:{}},G={};/**
  * @license React
  * react-jsx-runtime.production.min.js
  *
