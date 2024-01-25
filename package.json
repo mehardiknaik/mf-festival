@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
+    "preview": "vite preview --port 3000 --host",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "docker": "docker build -t my-vite-app .",
+    "docker-run": "docker run -p 3000:3000 my-vite-app"
   },
   "dependencies": {
     "dayjs": "^1.11.10",
