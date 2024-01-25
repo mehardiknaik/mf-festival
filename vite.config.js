@@ -1,11 +1,13 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import svgr from "vite-plugin-svgr";
 import federation from "@originjs/vite-plugin-federation";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "/mf-festival",
   plugins: [
+    svgr(),
     react(),
     federation({
       name: "remote-app",
